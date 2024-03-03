@@ -1,12 +1,27 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #000A23;
+    background-color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    flex-direction: row;
+}
+
+.left{
+    flex: 2;
+    align-items: center;
+}
+
+.right{
+    flex: 1;
+}
+
+.zurag{
+    transform: rotate(180deg);
+    max-height: 810px;
 }
 
 .login-container {
@@ -18,7 +33,7 @@ body {
 }
 
 h2 {
-    color: white;
+    color: #38acec;
     font-size: 26px;
     text-align: center;
     margin-bottom: 40px;
@@ -29,13 +44,13 @@ h2 {
     height: 28px;
     margin: 0px 50px 5px;
     background-color: #f4f4f4;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     padding: 10px;
     border-radius: 6px;
 }
 
 .text {
-    color: white;
+    color: #38acec;
     margin: 10px 54px; 
     display: flex;
     font-weight: bold;
@@ -52,16 +67,16 @@ h2 {
 
 .forgot-password a{ 
     text-decoration: none;
-    color: #1A93DF;
+    color: #38acec;
 }
 
 button{ 
     width: 392px; 
     height: 51px;
     border-radius: 6px;
-    background-color: #124F81;
+    background-color: #38acec;
     margin-top: 15px;
-    color: #7F8591;
+    color: white;
     font-weight: 1000;
 }
 
@@ -71,14 +86,14 @@ button{
     align-items: center;
     justify-content: center;
     margin: 50px 55px 20px;
-    color: #CCCCCC;
+    color: white;
     width: 100;
 }
 
 .line {
     flex-grow: 1;
     height: 1px;
-    background-color: #CCCCCC;
+    background-color: #38acec;
 }
 
 .or {
@@ -111,7 +126,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: grey;
 }
 
 .icon-box3{ 
@@ -164,7 +179,7 @@ button{
 
 .text1 a{ 
     text-decoration: none;
-    color: #0C7CDF;
+    color: #38acec;
     margin-left: 6px;
     font-size: 16px;
 }
