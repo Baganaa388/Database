@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS цахилгаан бараа</title>
+    <link rel="stylesheet" href="hrstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="header">
+        <div class="items">
+            <div class="logo">BBS</div>
+            <input type="text" placeholder="Хайх...">
+            
+           
+                <div class="wallet-box">
+                  <a href="login.html">Нэвтрэх</a>
+                </div>
+                
+               
+        </div>
+    </div>
+
+
+
+    <main>
+        
+            <br></br>
+            <br></br>
+            <h1 style="text-align: center;">Худалдааны зөвлөхүүд</h1>
+            <div class="card-container">
+                <div class="creator-card-xxa">
+                <!--    <img class="cover-photo" src="zurag11.jpg" alt="Cover Photo">-->
+                    <img class="profile-photo" src="https://th.bing.com/th/id/OIP.gRMVTi7gQoas5sImeoOEHAAAAA?rs=1&pid=ImgDetMain" alt="Profile Photo">
+                    <div class="user-info">
+                      <h2>Шинэ хэрэглэгч нэмэх</h2>
+                      <br>
+                        <a href="#" class="button">Нэмэх</a>
+                    </div>
+                </div>
+                <div class="creator-card">
+                    <img class="cover-photo" src="zurag11.jpg" alt="Cover Photo">
+                    <img class="profile-photo" src="https://th.bing.com/th/id/OIP.gRMVTi7gQoas5sImeoOEHAAAAA?rs=1&pid=ImgDetMain" alt="Profile Photo">
+                    <div class="user-info">
+                      <h2>Г. Болбаатар</h2>
+                      <span>Тус сайтад 2 дахь жилдээ ажиллаж байгаа.</span>
+                      <br>
+                        <a href="#" class="button">Тохируулах</a>
+                    </div>
+                </div>
+              
+                <div class="creator-card">
+                    <img class="cover-photo" src="zurag11.jpg" alt="Cover Photo">
+                    <img class="profile-photo" src="https://th.bing.com/th/id/OIP.X0jfGX5aNV6XSyYCUfWYXQHaIm?w=650&h=755&rs=1&pid=ImgDetMain" alt="Profile Photo">
+                    <div class="user-info">
+                        <h2>М. Мөнхбагана</h2>
+                        <span>Тус сайтад 2 дахь жилдээ ажиллаж байгаа.</span>
+                        <br>
+                        <a href="#" class="button">Тохируулах</a>
+                    </div>
+                </div>
+              
+                <div class="creator-card">
+                    <img class="cover-photo" src="zurag11.jpg" alt="Cover Photo">
+                    <img class="profile-photo" src="https://th.bing.com/th/id/OIP.FVtPw9fGzZyIHsfvr_hRLwHaHa?rs=1&pid=ImgDetMain" alt="Profile Photo">
+                    <div class="user-info">
+                        <h2>Н. Шүрэнцэцэг</h2>
+                        <span>Тус сайтад 2 дахь жилдээ ажиллаж байгаа.</span>
+                        <br>
+                        <a href="#" class="button">Холбогдох</a>
+                    </div>
+                </div>
+            </div>
+
+            <br></br>
+            <br></br>
+            <h1 style="text-align: center;">Хамгийн их асуудаг асуултууд</h1>
+            <span style="text-align: center;">Танд асуудал тулгараа юу?</span>
+            <br></br>
+            
+            <div class="faq-container">
+                <div class="faq-question" onclick="toggleFAQ('faq1')">Lorem ipsum ipsum ?</div>
+                <div class="faq-answer" id="faq1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              
+                <div class="faq-question" onclick="toggleFAQ('faq2')">Lorem ipsum ipsum ?</div>
+                <div class="faq-answer" id="faq2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              
+                <div class="faq-question" onclick="toggleFAQ('faq3')">Lorem ipsum ipsum ?</div>
+                <div class="faq-answer" id="faq3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              
+                <div class="faq-question" onclick="toggleFAQ('faq4')">Lorem ipsum ipsum ?</div>
+                <div class="faq-answer" id="faq4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              
+                <div class="faq-question" onclick="toggleFAQ('faq5')">Lorem ipsum ipsum ?</div>
+                <div class="faq-answer" id="faq5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+
+                <div class="faq-question" onclick="toggleFAQ('faq5')">Lorem ipsum ipsum ?</div>
+                <div class="faq-answer" id="faq5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              </div>
+              <script>
+                function toggleFAQ(id) {
+                  var answer = document.getElementById(id);
+                  answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+                }
+              </script>
+<br></br>
+<br></br>
+<!--             <div class="pisda">
+                <div class="inner-pisda">
+                    <h1 style="text-align: center; margin-top: 4rem;">Highest Quality Collection</h1>
+                    <button class="create">Get Started</button>
+                </div>
+              </div>
+              --> 
+    </main>
+
+
+
+
+    <div class="footer">
+        <div class="footer-logo">
+            <span>BBS</span>
+            <a href="#">Монголын хамгийн түргэн шуурхай, найдвартай үйлчилгээтэй цахим дэлгүүр.</a>
+        </div>
+        <div class="about">
+            <span>Бидний тухай</span>
+            <a href="#">Бараа</a>
+            <a href="#">Хүний нөөц</a>
+            <a href="#">Захирлын мэндчилгээ</a>
+            <a href="#">Санал гомдол</a>
+        </div>
+        <div class="company">
+            <span>Сайтын тухай</span>
+            <a href="#">Нууцлалын бодлого</a>
+            <a href="#">Шинээр бүртгүүлэх</a>
+            <a href="#">Ажилд орох</a>
+            <a href="#">Бараа нэмэх</a>
+        </div>
+        <div class="contact">
+            <span>Холбоо барих</span>
+            <a href="#">+976 96750533</a>
+            <a href="#">baganaa.eden@gmail.com</a>
+            <div id="platforms">
+                <img src="youtube.svg" alt="">
+                <img src="discord.svg" alt="">
+                <img src="instagram.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>

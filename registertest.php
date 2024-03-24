@@ -1,0 +1,115 @@
+<?php
+
+include 'config.php';
+
+if(isset($_POST['submit'])){
+
+   $name = $_POST['name'];
+   $name = filter_var($name, );
+   $email = $_POST['email'];
+   $email = filter_var($email, );
+   $pass = $_POST['pass'];
+
+   $pass = md5($_POST['pass']);
+   $pass = filter_var($pass, );
+   $cpass = md5($_POST['cpass']);
+   $cpass = filter_var($cpass, );
+
+
+   $select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+   $select->execute([$email]);
+
+   if($select->rowCount() > 0){
+      $message[] = 'Хэрэглэгч бүртгэгдсэн байна!';
+   }else{
+      if($pass != $cpass){
+         $message[] = 'Нууц үг таарахгүй байна!';
+      }
+      
+      else{
+         $insert = $conn->prepare("INSERT INTO `user`(name, email, password) VALUES(?,?,?)");
+         $insert->execute([$name, $email, $cpass]);
+         if($insert){
+            #move_uploaded_file($image_tmp_name, $image_folder);
+            $message[] = 'Амжилттай бүртгэгдлээ!';
+            header('location:login.php');
+         }
+      }
+   }
+
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="loginStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100&family=Fira+Sans:wght@200;300&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="soloL.svg">
+    <title>Login</title>
+</head>
+<body>
+    <div class="left">
+    <div class="login-container">
+        <h2>Sign In</h2>
+        <div class="icon">
+            
+        </div>
+        <div class="username-container">
+            <div class="text">
+                <Label for="username">Username</Label>
+            </div>
+                <input type="email" id="email" name="email" class="box">
+        </div>
+        <div class="email-container">
+            <div class="text">
+                <label for="email">First name</label>
+            </div>
+                <input type="text" id="FirstName" name="" class="box">   
+                <div class="age-container">
+                    <div class="text">
+                        <Label for="age">Last name</Label>
+                    </div>
+                        <input type="text" id="LastName" name="" class="box">
+                </div>
+                <div class="age-container">
+                    <div class="text">
+                        <Label>E-Mail</Label>
+                    </div>
+                        <input type="email" id="email" class="box">
+                </div>
+                <div class="password-container">
+                    <div class="text">
+                        <Label for="password">password</Label>
+                    </div>
+                        <input type="password" id="password" name="password" class="box">
+                </div>     
+                <div class="password-container">
+                    <div class="text">
+                        <Label for="password">password</Label>
+                    </div>
+                        <input type="password" id="password" name="password" class="box">
+                </div>           
+            
+        </div>
+        <div class="sign-in-container">
+            <button type="submit" >Regsiter</button>
+        </div>
+        <div class="separator">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="links">
+            Already a member? <a href="login.html">Sign in</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
